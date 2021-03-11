@@ -7,7 +7,7 @@ This project was developed with the following technologies:
 - [ReactJS](https://pt-br.reactjs.org/)
 - [JavaScript](https://www.javascript.com/)
 - [VS Code](https://code.visualstudio.com/)
-- [Next.js]((https://nextjs.org/)
+- [Next.js](https://nextjs.org/)
 
 
 ## :information_source: Getting Started
