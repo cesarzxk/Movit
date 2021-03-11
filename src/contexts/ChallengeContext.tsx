@@ -22,6 +22,7 @@ type ChalllengesContextData = {
     resetChallenge: ()=>void;
     completeChallenge: ()=>void;
     closeLevelModal: ()=>void;
+    
 
 }
 
@@ -40,7 +41,7 @@ export function ChallengeProvider({children, ...rest}: ChallengeProviderProps){
     const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted);
     const [activeChallenge, setActiveChallenge] =  useState(null);
     const [isLeveUp, setIsLevelUp] = useState(false);
-
+    
     const experienceToNextLevel = Math.pow((level+1)*4, 2);
 
     useEffect(()=>{
@@ -109,7 +110,9 @@ export function ChallengeProvider({children, ...rest}: ChallengeProviderProps){
             startNewChallenge,
             resetChallenge,
             completeChallenge,
-            closeLevelModal
+            closeLevelModal,
+            
+            
             }}
         >
         {isLeveUp && <LevelUpModal/>}
