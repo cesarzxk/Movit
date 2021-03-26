@@ -1,12 +1,20 @@
 import {useContext, useEffect, useState } from 'react';
+import { Changecolor } from '../components/ChangeColor';
 import { ActiveLink } from '../components/Routes';
 import { GlobalContext } from '../contexts/GlobalContext';
 import styles from '../styles/pages/Login.module.css';
+import {GetServerSideProps} from 'next';
 
-export default function Login(){
+type PropsDate = {
+    darkMod: string;
+}
+
+export default function Login(props:PropsDate){
     const [signed,setSigned] = useState(true);
     const [usetext, setUseText] = useState('');
-    const {setNameProfiler} = useContext(GlobalContext);
+    const {setNameProfiler, changelight} = useContext(GlobalContext);
+    
+
     useEffect(()=>{
         console.log(usetext);
         if (usetext != ''){
@@ -18,9 +26,18 @@ export default function Login(){
 
     }, [usetext]);
 
+    useEffect(()=>{
+        if (props.darkMod == 'true'){
+            changelight(true);
+        }else{
+            changelight(false);
+        }
+    },[])
+
 
     return(
     <div className={styles.loginContainer}>
+        <Changecolor/>
         <section>
         <div className={styles.loginImage}>
             <img src="logo.svg" alt="Icon"/>
@@ -39,4 +56,15 @@ export default function Login(){
         </section>
     </div>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+
+    const {darkMod} = ctx.req.cookies;
+    
+    return{
+    props : {
+        darkMod: darkMod
+    }
+  };
 }

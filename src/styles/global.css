@@ -12,6 +12,7 @@
     html{font-size: 87.5%;}
 }
 
+
 :root {
     --white:#fff;
     --background: #f2f3f5;
@@ -26,9 +27,10 @@
     --blue-twitter: #2aa9e0;
 }
 
+
 body{
     background: var(--background);
-    color: #666;
+    color: var(--text);
 
 }
 

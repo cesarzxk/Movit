@@ -1,0 +1,10 @@
+.container{
+    position: absolute;
+    right: 10rem;
+    top: 1.75rem;
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+}

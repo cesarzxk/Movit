@@ -1,6 +1,4 @@
-import { TIMEOUT } from 'dns';
-import { useState, useEffect, useContext } from 'react';
-import { ChallengeContext } from '../contexts/ChallengeContext';
+import {useContext } from 'react';
 import styles from '../styles/components/Countdown.module.css';
 import {CountdownContext} from '../contexts/CountdownContext';
 

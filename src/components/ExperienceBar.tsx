@@ -17,6 +17,7 @@ export function ExperienceBar(props){
                 <span className={styles.currentExperience} style={{left:`${percentToNextLevel}%`}}>{currentExperience} xp</span>
             </div>
             <span>{experienceToNextLevel} xp</span>
+            
         </header>
     );
 }

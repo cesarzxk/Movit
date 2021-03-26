@@ -4,7 +4,8 @@ import {GetServerSideProps} from 'next';
 import {ChallengeProvider} from '../contexts/ChallengeContext';
 
 
-import { ExperienceBar } from "../components/ExperienceBar"
+import { ExperienceBar } from "../components/ExperienceBar";
+import {Changecolor} from "../components/ChangeColor";
 import Profile from "../components/Profile";
 import styles from "../styles/pages/Home.module.css"
 import CompletedChallenges from "../components/CompletedChallenges";
@@ -31,6 +32,7 @@ export default function Main(props:PropsDate) {
           <title>Inicio </title>
         </Head>
         <ExperienceBar/>
+        <Changecolor/>
         
         <CountdownProvider>
           <section>
