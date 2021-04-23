@@ -1,4 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 📷 screenshots
+
+![Captura de tela 2021-04-23 135033](https://user-images.githubusercontent.com/43748428/115904405-1955a100-a43b-11eb-99da-6440ea709922.png)
+![Captura de tela 2021-04-23 135058](https://user-images.githubusercontent.com/43748428/115904408-19ee3780-a43b-11eb-953f-58744ec060d1.png)
+
 
 ## :rocket: Technologies
 
