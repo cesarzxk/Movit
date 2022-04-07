@@ -1,9 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## 📷 screenshots
 
 ![Captura de tela 2021-04-23 135033](https://user-images.githubusercontent.com/43748428/115904405-1955a100-a43b-11eb-99da-6440ea709922.png)
 ![Captura de tela 2021-04-23 135058](https://user-images.githubusercontent.com/43748428/115904408-19ee3780-a43b-11eb-953f-58744ec060d1.png)
-
 
 ## :rocket: Technologies
 
@@ -13,7 +13,13 @@ This project was developed with the following technologies:
 - [TypeScript](https://www.typescriptlang.org/)
 - [VS Code](https://code.visualstudio.com/)
 - [Next.js](https://nextjs.org/)
+- [Jest](https://jestjs.io/pt-BR/)
 
+## 🧪Tests
+
+<P>Testes have been implemented with Jest, as shown in the image below or <a>click here</a> to see.</p>
+
+<img src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649372583/movit/Captura_de_tela_2022-04-07_195932_p4tnfc.png" />
 
 ## :information_source: Getting Started
 
