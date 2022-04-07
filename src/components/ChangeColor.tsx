@@ -8,14 +8,15 @@ export function Changecolor() {
   return (
     <div className={styles.container}>
       <span
+        data-testid="LightModeButtom"
         onClick={() => {
           changelight(!lightState);
         }}
       >
         {lightState ? (
-          <IoSunny className={styles.icon} />
+          <IoSunny data-testid="SunnyIcon" className={styles.icon} />
         ) : (
-          <IoMoon className={styles.icon} />
+          <IoMoon data-testid="MoonIcon" className={styles.icon} />
         )}
       </span>
     </div>
