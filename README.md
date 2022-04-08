@@ -17,7 +17,7 @@ This project was developed with the following technologies:
 
 ## 🧪Tests
 
-<P>Testes have been implemented with Jest, as shown in the image below or <a>click here</a> to see.</p>
+<P>Testes have been implemented with Jest, as shown in the image below or <a href="https://cesarzxk.github.io/Movit/components/index.html">click here</a> to see.</p>
 
 <img src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649430905/movit/Captura_de_tela_2022-04-07_195932_p4tnfc_tefvgr.png" />
 
