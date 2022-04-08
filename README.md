@@ -19,7 +19,7 @@ This project was developed with the following technologies:
 
 <P>Testes have been implemented with Jest, as shown in the image below or <a>click here</a> to see.</p>
 
-<img src=https://res.cloudinary.com/da91uwz7j/image/upload/v1649430905/movit/Captura_de_tela_2022-04-07_195932_p4tnfc_tefvgr.png" />
+<img src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649430905/movit/Captura_de_tela_2022-04-07_195932_p4tnfc_tefvgr.png" />
 
 ## :information_source: Getting Started
 
