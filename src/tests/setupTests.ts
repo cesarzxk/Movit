@@ -3,4 +3,18 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom/extend-expect";
-import "../../jest.config";
+
+globalThis.Notification = {
+  requestPermission: jest.fn(),
+  permission: "granted",
+} as unknown as jest.Mocked<typeof Notification>;
+
+export const mocks = {
+  Audio: {
+    pause: jest.fn(),
+    play: jest.fn(),
+  },
+  Notification: {
+    requestPermission: jest.fn(),
+  },
+};
