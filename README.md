@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 <img width="400px" src="https://user-images.githubusercontent.com/43748428/115904405-1955a100-a43b-11eb-99da-6440ea709922.png"/>
 <img width="400px" src="https://user-images.githubusercontent.com/43748428/115904408-19ee3780-a43b-11eb-953f-58744ec060d1.png"/>
 </div>
+
 ## :rocket: Technologies
 
 This project was developed with the following technologies:
