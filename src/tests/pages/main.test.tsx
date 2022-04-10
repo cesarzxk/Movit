@@ -3,7 +3,7 @@ import React from "react";
 import { screen } from "@testing-library/dom";
 
 import { GlobalContext } from "../../contexts/GlobalContext";
-import Main from "../../pages/main";
+import Main, { getServerSideProps } from "../../pages/main";
 
 describe("Main", () => {
   it("If main page have been displayed correctly.", () => {
@@ -85,5 +85,29 @@ describe("Main", () => {
       </GlobalContext.Provider>
     );
     expect(lightPush).toEqual(true);
+  });
+
+  it("If getServerSideProps have been called.", async () => {
+    const req = {
+      cookies: {
+        level: 1,
+        currentExperience: 0,
+        challengesCompleted: 0,
+        darkMod: "teste",
+      },
+    };
+
+    const ServerSideProps = await getServerSideProps({
+      req: req,
+    } as any);
+
+    expect(ServerSideProps).toEqual({
+      props: {
+        challengesCompleted: 0,
+        currentExperience: 0,
+        darkMod: "teste",
+        level: 1,
+      },
+    });
   });
 });

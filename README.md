@@ -27,7 +27,7 @@ This project was developed with the following technologies:
 </div>
 
 <div align="center">
-<img width="400px" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649551706/movit/Captura_de_tela_2022-04-09_214609_inwajj.png" />
+<img width="400px" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649554293/movit/Captura_de_tela_2022-04-09_223101_rfjvud.png" />
 </div>
 
 ## :information_source: Getting Started

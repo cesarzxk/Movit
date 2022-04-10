@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import { fireEvent, screen } from "@testing-library/dom";
-import Login from "../../pages/login";
+import Login, { getServerSideProps } from "../../pages/login";
 import { mocked } from "jest-mock";
 
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -77,5 +77,19 @@ describe("Login", () => {
     expect(userName).toEqual("cesarzxk");
     fireEvent.click(screen.getByTestId("mainButtonLogin"));
     expect(pushMocked).toBeCalled();
+  });
+
+  it("If getServerSideProps have been called.", async () => {
+    const req = {
+      cookies: {
+        darkMod: "true",
+      },
+    };
+
+    const ServerSideProps = await getServerSideProps({
+      req: req,
+    } as any);
+
+    expect(ServerSideProps).toEqual({ props: { darkMod: "true" } });
   });
 });
