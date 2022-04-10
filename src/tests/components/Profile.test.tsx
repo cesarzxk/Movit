@@ -1,26 +1,33 @@
 import { render, screen } from "@testing-library/react";
-import { ActiveLink } from "../../components/Routes";
-import { mocked } from "jest-mock";
-import { fireEvent } from "@testing-library/dom";
-
+import Profile from "../../components/Profile";
 import React from "react";
-import { useRouter } from "next/router";
 
-jest.mock("next/router");
+import { ChallengeContext } from "../../contexts/ChallengeContext";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
-describe("Routes", () => {
-  it("If Routes ActiveLink has called correctly ", () => {
-    const useRouterMocked = mocked(useRouter);
-    const pushMocked = jest.fn();
+describe("Profile", () => {
+  it("If Profile informations has displayed correctly ", () => {
+    render(
+      <GlobalContext.Provider
+        value={
+          {
+            nameProfiler: "TesteName",
+          } as any
+        }
+      >
+        <ChallengeContext.Provider
+          value={
+            {
+              level: 2,
+            } as any
+          }
+        >
+          <Profile />
+        </ChallengeContext.Provider>
+      </GlobalContext.Provider>
+    );
 
-    useRouterMocked.mockReturnValue({
-      push: pushMocked,
-    } as any);
-
-    render(<ActiveLink href="/">ActiveLinkTest</ActiveLink>);
-
-    fireEvent.click(screen.getByText("ActiveLinkTest"));
-
-    expect(pushMocked).toHaveBeenCalled();
+    expect(screen.getByText(/TesteName/i)).toBeInTheDocument();
+    expect(screen.getByText(/Level 2/i)).toBeInTheDocument();
   });
 });

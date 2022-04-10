@@ -9,7 +9,7 @@ export function ActiveLink({ children, href }) {
   };
 
   return (
-    <a href={href} onClick={handleClick}>
+    <a data-testid="activeLink" href={href} onClick={handleClick}>
       {children}
     </a>
   );

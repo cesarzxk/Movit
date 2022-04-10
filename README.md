@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## 📷 screenshots
+
 <div align="center">
 <img width="400px" src="https://user-images.githubusercontent.com/43748428/115904405-1955a100-a43b-11eb-99da-6440ea709922.png"/>
 <img width="400px" src="https://user-images.githubusercontent.com/43748428/115904408-19ee3780-a43b-11eb-953f-58744ec060d1.png"/>
@@ -23,6 +24,10 @@ This project was developed with the following technologies:
 <div align="center">
 <img width="400px" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649430905/movit/Captura_de_tela_2022-04-07_195932_p4tnfc_tefvgr.png" />
 <img width="400px" src="http://res.cloudinary.com/da91uwz7j/image/upload/v1649523466/movit/Captura_de_tela_2022-04-09_135537_a1ung4.png" />
+</div>
+
+<div align="center">
+<img width="400px" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1649551706/movit/Captura_de_tela_2022-04-09_214609_inwajj.png" />
 </div>
 
 ## :information_source: Getting Started

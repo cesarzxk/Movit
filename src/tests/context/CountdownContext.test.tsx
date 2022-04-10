@@ -2,17 +2,16 @@ import { act, render, screen } from "@testing-library/react";
 import React, { useContext } from "react";
 import { fireEvent } from "@testing-library/dom";
 
-import { mocked } from "jest-mock";
-
 import {
   CountdownContext,
   CountdownProvider,
 } from "../../contexts/CountdownContext";
+
 import { ChallengeContext } from "../../contexts/ChallengeContext";
 
 jest.mock("js-cookie");
-jest.useFakeTimers();
-describe("Profile", () => {
+const timer = jest.useFakeTimers();
+describe("CountdownContext", () => {
   it("If startCountdown function have been called and time decreased", async () => {
     function FakeComponent() {
       const { startCountdown, stopCountdown, minutes, seconds } =
@@ -36,14 +35,15 @@ describe("Profile", () => {
         </CountdownProvider>
       </ChallengeContext.Provider>
     );
+    fireEvent.click(screen.getByText("startCountdownTeste"));
 
     act(() => {
-      fireEvent.click(screen.getByText("startCountdownTeste"));
       jest.advanceTimersByTime(1000);
     });
 
     expect(screen.getByText(/24/i)).toBeInTheDocument();
     expect(screen.getByText(/59/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByText("stopCountdownTeste"));
   });
 
   it("If startCountdown function have been called and time decreased", async () => {
@@ -69,12 +69,14 @@ describe("Profile", () => {
         </CountdownProvider>
       </ChallengeContext.Provider>
     );
-
+    fireEvent.click(screen.getByText("startCountdownTeste"));
     act(() => {
-      fireEvent.click(screen.getByText("startCountdownTeste"));
       jest.advanceTimersByTime(1000);
-      fireEvent.click(screen.getByText("stopCountdownTeste"));
     });
+    expect(screen.getByText(/24/i)).toBeInTheDocument();
+    expect(screen.getByText(/59/i)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText("stopCountdownTeste"));
 
     expect(screen.getByText(/25/i)).toBeInTheDocument();
     expect(screen.getByText(/0/i)).toBeInTheDocument();
@@ -112,5 +114,6 @@ describe("Profile", () => {
     });
 
     expect(screen.getByText(/true/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByText("stopCountdownTeste"));
   });
 });
